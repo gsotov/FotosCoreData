@@ -10,21 +10,114 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Fotos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FotoCoreDatas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZwK-sH-1Q0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="235"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPf-ND-QVa">
+                                <rect key="frame" x="159" y="397" width="56" height="30"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.0" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Guardar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="guardar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dau-jp-fdY"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3uZ-Kc-GsU">
+                                <rect key="frame" x="16" y="340" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v30-r5-SHh">
+                                <rect key="frame" x="154" y="450" width="66" height="30"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.0" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Ver Fotos">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1tL-TN-Tmq" kind="show" id="YzD-pA-GMk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZwK-sH-1Q0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0ME-dJ-oKZ"/>
+                            <constraint firstItem="3uZ-Kc-GsU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IY1-UM-8Jh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kPf-ND-QVa" secondAttribute="trailing" constant="160" id="QB7-9U-P4X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kPf-ND-QVa" secondAttribute="bottom" constant="240" id="Qa9-2G-F6o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v30-r5-SHh" secondAttribute="bottom" constant="187" id="ShS-jc-3O3"/>
+                            <constraint firstItem="3uZ-Kc-GsU" firstAttribute="top" secondItem="ZwK-sH-1Q0" secondAttribute="bottom" constant="41" id="TMG-BI-7LF"/>
+                            <constraint firstItem="v30-r5-SHh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="daX-oB-nDA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3uZ-Kc-GsU" secondAttribute="trailing" constant="16" id="fTN-Gk-T7S"/>
+                            <constraint firstItem="kPf-ND-QVa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="lXV-Y3-GMA"/>
+                            <constraint firstItem="kPf-ND-QVa" firstAttribute="top" secondItem="3uZ-Kc-GsU" secondAttribute="bottom" constant="27" id="lex-eW-pWM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v30-r5-SHh" secondAttribute="trailing" constant="155" id="liE-nX-F11"/>
+                            <constraint firstItem="ZwK-sH-1Q0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nZC-zE-DaB"/>
+                            <constraint firstItem="v30-r5-SHh" firstAttribute="top" secondItem="kPf-ND-QVa" secondAttribute="bottom" constant="23" id="r6j-Ef-WD9"/>
+                            <constraint firstItem="ZwK-sH-1Q0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tWF-mU-hPX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZwK-sH-1Q0" secondAttribute="bottom" constant="368" id="wYx-Ac-Zat"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hLw-1H-7pL"/>
+                    <navigationItem key="navigationItem" title="Fotos" id="hLw-1H-7pL">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="8yV-c0-PCT">
+                                <connections>
+                                    <action selector="camara:" destination="BYZ-38-t0r" id="bAJ-h7-biQ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="acd-iz-ov5">
+                                <connections>
+                                    <action selector="galeria:" destination="BYZ-38-t0r" id="2kN-pP-N0h"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imagen" destination="ZwK-sH-1Q0" id="Kd5-Hw-CuX"/>
+                        <outlet property="nombre" destination="3uZ-Kc-GsU" id="NXb-pT-F5C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="-817"/>
+            <point key="canvasLocation" x="76" y="-817.24137931034488"/>
+        </scene>
+        <!--Imagenes Table View Controller-->
+        <scene sceneID="Rxo-s1-tSW">
+            <objects>
+                <tableViewController id="1tL-TN-Tmq" customClass="ImagenesTableViewController" customModule="FotoCoreDatas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6HY-Og-org">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="qyR-Hi-8ia">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qyR-Hi-8ia" id="coB-LN-j8l">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1tL-TN-Tmq" id="zVy-ny-ZZ9"/>
+                            <outlet property="delegate" destination="1tL-TN-Tmq" id="Tpg-7V-2fg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqQ-ge-ahj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="-817"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="smy-bg-8IB">

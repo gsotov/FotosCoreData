@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7887EDD21E77F1B009A6356 /* ImagenesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7887EDC21E77F1B009A6356 /* ImagenesTableViewController.swift */; };
 		D7E652B821E69B8A00B322F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E652B721E69B8A00B322F5 /* AppDelegate.swift */; };
 		D7E652BA21E69B8A00B322F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E652B921E69B8A00B322F5 /* ViewController.swift */; };
 		D7E652BD21E69B8A00B322F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E652BB21E69B8A00B322F5 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7887EDC21E77F1B009A6356 /* ImagenesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenesTableViewController.swift; sourceTree = "<group>"; };
 		D7E652B421E69B8A00B322F5 /* FotoCoreDatas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FotoCoreDatas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E652B721E69B8A00B322F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7E652B921E69B8A00B322F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				D7E652B721E69B8A00B322F5 /* AppDelegate.swift */,
 				D7E652B921E69B8A00B322F5 /* ViewController.swift */,
+				D7887EDC21E77F1B009A6356 /* ImagenesTableViewController.swift */,
 				D7E652BB21E69B8A00B322F5 /* Main.storyboard */,
 				D7E652C121E69B8B00B322F5 /* Assets.xcassets */,
 				D7E652C321E69B8B00B322F5 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7887EDD21E77F1B009A6356 /* ImagenesTableViewController.swift in Sources */,
 				D7E652C021E69B8A00B322F5 /* FotoCoreDatas.xcdatamodeld in Sources */,
 				D7E652BA21E69B8A00B322F5 /* ViewController.swift in Sources */,
 				D7E652B821E69B8A00B322F5 /* AppDelegate.swift in Sources */,
