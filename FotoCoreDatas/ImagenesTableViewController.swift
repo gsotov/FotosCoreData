@@ -42,10 +42,19 @@ class ImagenesTableViewController: UITableViewController {
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
+        
+        
         let imagen = imagenes[indexPath.row]
         
         cell.textLabel?.text = imagen.nombre
-        cell.imageView?.image = UIImage(data: imagen.imagen! as Data)
+        
+        if imagen.imagen != nil{
+             cell.imageView?.image = UIImage(data: imagen.imagen! as Data)
+        }else{
+            cell.imageView?.image = UIImage(named: "default")
+        }
+        
+       
         
         return cell
     }

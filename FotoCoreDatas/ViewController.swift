@@ -23,14 +23,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func guardar(_ sender: UIButton)
     {
         let contexto = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
         let imagenEntity = NSEntityDescription.entity(forEntityName: "Imagenes", in: contexto)
         let newImagen = NSManagedObject(entity: imagenEntity!, insertInto: contexto)
         
-        let imagenFinal = imagen.image!.pngData() as NSData?
-        
+        if let imagen  = imagen.image{
+            let imagenFinal = imagen.pngData() as NSData?
+            newImagen.setValue(imagenFinal, forKey: "imagen")
+        }
         
         newImagen.setValue(nombre.text, forKey: "nombre")
-        newImagen.setValue(imagenFinal, forKey: "imagen")
         
         do {
             try contexto.save()
